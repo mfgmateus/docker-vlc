@@ -1,0 +1,10 @@
+version: "3.6"
+services:
+        vlc:
+                command: "https://www.youtube.com/watch?v=ENsXQFcpjcw vlc://quit --no-qt-error-dialogs"
+                image: debian-vlc
+                volumes:
+                        - ./snapshots:/home/vlc/snapshots
+                deploy:
+                        replicas: 1
+
